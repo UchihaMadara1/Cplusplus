@@ -1,0 +1,13 @@
+﻿  AVLtree.cpp
+d:\git上传目录\5-8\5-8\avltree.cpp(51): error C2955: “AVLTree”: 使用 类 模板 需要 模板 参数列表
+          d:\git上传目录\5-8\5-8\avltree.cpp(32) : 参见“AVLTree”的声明
+d:\git上传目录\5-8\5-8\avltree.cpp(51): error C2065: “Type”: 未声明的标识符
+d:\git上传目录\5-8\5-8\avltree.cpp(51): error C2923: “AVLNode”: 对于参数“Type”，“Type”不是有效的 模板 类型变量
+d:\git上传目录\5-8\5-8\avltree.cpp(51): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+d:\git上传目录\5-8\5-8\avltree.cpp(51): error C2143: 语法错误 : 缺少“,”(在“&”的前面)
+d:\git上传目录\5-8\5-8\avltree.cpp(64): error C2244: “AVLTree<Type>::Insert”: 无法将函数定义与现有的声明匹配
+          定义
+          'bool AVLTree::Insert(AVLNode *&,const int)'
+          现有声明
+          'bool AVLTree<Type>::Insert(AVLNode<Type> *&,const Type &)'
+          'bool AVLTree<Type>::Insert(const Type &)'
