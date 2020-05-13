@@ -45,6 +45,10 @@ public:
 	{
 		return Insert(root, x);
 	}
+	bool Delete(const Type &x)
+	{
+		return Delete(root,x);
+	}
 public:
 	void RotateL(AVLNode<Type> *&ptr)
 	{
@@ -116,6 +120,7 @@ public:
 	}
 protected:
 	bool Insert(AVLNode<Type> *&root, const Type &x);
+	bool Delete(AVLNode<Type> *&root,const Type &x);
 	void Destroy(AVLNode<Type> *&root);
 private:
 	AVLNode<Type> *root;
@@ -216,6 +221,34 @@ bool AVLTree<Type>::Insert(AVLNode<Type> *&t, const Type &x)
 
 	return true;
 }
+//删除节点
+template<class Type>
+bool AVLTree<Type>::Delete(AVLNode<Type> *&t, const Type &x)
+{
+	stack<AVLNode<Type> *> st;
+	AVLNode<Type> *pr = nullptr;
+	AVLNode<Type> *p = t;
+	while (p != nullptr)
+	{
+		if (x > p->data)
+		{
+			st.push(p);
+			p = p->rightchild;
+		}
+		else if (x < p->data)
+		{
+			st.push(p);
+			p = p->leftchild;
+		}
+		else
+			break;
+	}
+	if (p == nullptr)
+		return false;
+	//删除节点
+
+	//调整AVL树的平衡
+}
 
 //摧毁AVL树
 template<class Type>
@@ -230,9 +263,7 @@ void AVLTree<Type>::Destroy(AVLNode<Type> *&t)
 		return;
 	}
 	Destroy(t->leftchild);
-	t->leftchild = nullptr;
 	Destroy(t->rightchild);
-	t->rightchild = nullptr;
 	delete t;
 	t = nullptr;
 }
