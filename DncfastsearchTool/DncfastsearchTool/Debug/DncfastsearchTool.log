@@ -1,0 +1,3 @@
+﻿  Sysutil.cc
+sqlite3.lib(sqlite3.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“sqlite3.lib(sqlite3.obj)”或在“D:\git上传目录\DncfastsearchTool\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+  DncfastsearchTool.vcxproj -> D:\git上传目录\DncfastsearchTool\Debug\DncfastsearchTool.exe
